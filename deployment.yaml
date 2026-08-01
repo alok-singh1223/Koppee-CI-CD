@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: koppee-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: koppee
+
+  template:
+    metadata:
+      labels:
+        app: koppee
+
+    spec:
+      containers:
+      - name: koppee
+        image: aa3000/koppee:v3
+        ports:
+        - containerPort: 80
