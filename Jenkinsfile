@@ -11,15 +11,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-
-            steps {
-
-                git 'https://github.com/alok-singh1223/Koppee-CI-CD.git'
-
-            }
-        }
-
         stage('Build Docker Image') {
 
             steps {
